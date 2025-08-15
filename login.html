@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Local Store</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<style>
+  body {
+  background-image: url("assets/login.jpg"); /* Change path if needed */
+  background-size: cover; /* Make it fill the screen */
+  background-repeat: no-repeat;
+  background-position: cover;
+  /* margin: 0; */
+  font-family: Arial, sans-serif;
+}
+.auth-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 100px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+</style>
+<body>
+  <div class="auth-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required /><br />
+      <input type="password" id="password" placeholder="Password" required /><br />
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+  </div>
+
+
+  <script src="js/login.js"></script>
+</body>
+</html>

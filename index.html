@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WarmGlow Living</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">WarmGlow Living</div>
+
+    <nav>
+        <a href="home.html" class="active">Home</a>
+     <div class="dropdown">
+  <button class="dropbtn">Shopping ▼</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="filterByCategory('all')">All</a>
+    <a href="#" onclick="filterByCategory('Furniture')">Furniture</a>
+    <a href="#" onclick="filterByCategory('Decor')">Decor</a>
+    <a href="#" onclick="filterByCategory('Wall Decor')">Wall Decor</a>
+    <a href="#" onclick="filterByCategory('Textiles')">Textiles</a>
+    <a href="#" onclick="filterByCategory('Lighting')">Lighting</a>
+    <a href="#" onclick="filterByCategory('Plants')">Plants</a>
+    <a href="#" onclick="filterByCategory('Storage')">Storage</a>
+    <a href="#" onclick="filterByCategory('Kitchen')">Kitchen</a>
+    <a href="#" onclick="filterByCategory('Bathroom')">Bathroom</a>
+  </div>
+</div>
+
+      <a href="cart.html">Cart 🛒</a>
+      <a href="purchase-details.html" class="active">Product Purchage Details</a>
+      <a href="about.html">About Us</a>
+      <a href="logout.html">Logout</a>
+
+    </nav>
+  </header>
+   <section class="filters">
+    <span id="welcomeUser"></span>
+   </section>
+  <!-- Search & Price Filter -->
+  <section class="filters">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="below1000">Below ₹1000</option>
+      <option value="above1000">Above ₹1000</option>
+      <option value="below500">Below ₹500</option>
+      <option value="above1000">Above ₹500</option>
+    </select>
+  </section>
+
+  <!-- Product Listing -->
+  <section class="product-list" id="product-list">
+    <!-- Products will be dynamically injected here -->
+  </section>
+
+  <!-- JavaScript Files -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+
+<!-- Buy Modal -->
+<div id="buyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-image" src="" alt="" />
+    <h3 id="modal-name"></h3>
+    <p id="modal-desc"></p>
+    <p><strong>Price:</strong> ₹<span id="modal-price"></span></p>
+    <label for="userAddress">Delivery Address:</label>
+    <textarea id="userAddress" rows="3" style="width: 100%;" placeholder="Enter your full address"></textarea>
+    <br><br>
+    <button onclick="confirmBuy()">Confirm Purchase</button>
+    <button onclick="window.location.href='index.html'">Cancel</button>
+  </div>
+</div>
+
+
+</body>
+</html>
